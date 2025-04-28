@@ -43,8 +43,7 @@ FROM customer_purchases;
 then write another query that uses this one as a subquery (or temp table) and filters the results to 
 only the customer’s most recent visit. */
 
-SELECT 
-customer_id, market_date,
+SELECT customer_id, market_date
 FROM
 (
 	SELECT  DISTINCT customer_id, market_date,
@@ -171,7 +170,7 @@ VALUES (
 HINT: If you don't specify a WHERE clause, you are going to have a bad time.*/
 
 DELETE from product_units
-where product_id = 77; AND product_name = 'Apple Pie';
+where product_id = 77 AND product_name = 'Apple Pie';
 
 
 -- UPDATE
